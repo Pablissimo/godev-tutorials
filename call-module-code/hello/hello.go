@@ -12,12 +12,14 @@ func main() {
 	// Disable time, source file and line number
 	log.SetFlags(0)
 
-	message, err := greetings.Hello("Gladys")
+	names := []string{"Gladys", "Samantha", "Darrin"}
+
+	messages, err := greetings.Hellos(names)
 
 	if err != nil {
 		// Will exit
 		log.Fatal(err)
 	}
 
-	fmt.Println(message)
+	fmt.Println(messages)
 }
